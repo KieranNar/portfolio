@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Kieran Nar</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+      }
+
+      .w3-half img:hover {
+        opacity: 1
+      }
+
+      A {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding"
+      style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+        style="width:100%;font-size:22px">Close Menu</a>
+      <div class="w3-container" style="padding:24px 16px;">
+        <h3><b>Kieran Nar</b></h3>
+      </div>
+      <div class="w3-bar-block">
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+        <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a>
+        <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a>
+        <a href="#awardsandgrants" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Awards and
+          grants</a>
+        <a href="#presentations" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Presentations</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+      <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+      <span>Kieran Nar</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+      id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+      <!-- Header -->
+      <div class="w3-container" style="margin-top:80px" id="home">
+        <h1 class="w3-xxlarge" style="padding: 2%; padding-bottom: 0%;"><b>Polymer Additive Manufacturing</b></h1>
+        <h1 class="w3-xxlarge w3-text-blue" style="padding: 2%; padding-top: 0%;"><b>Fact or Friction?</b></h1>
+      </div>
+
+      <!-- First Grid -->
+      <div style="padding: 5%;" class="w3-row-padding w3-container" id="research">
+        <h2>Kieran Nar</h2>
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <p>PhD researcher investigating the friction and wear properties of Additively
+              Manufactured (LS) polymer components.</p>
+            <br>
+            <p class="w3-text-grey">Research topics include:
+              <br>
+              <br> - The comprehensive characterisation of Laser Sintered Polyamide-12 surfaces
+              <br><br>
+              - Understanding transient regime behaviour when Laser Sintered Polyamide-12 components are subject to
+              dynamic contact.
+            </p>
+          </div>
+
+          <div class="w3-third w3-center">
+            <img src="me.png" class="w3-image" style="width:80%; padding-top:10%; align-items:center" alt="me">
+          </div>
+        </div>
+      </div>
+
+      <!-- Research -->
+      <div class="w3-row-padding" style="padding: 5%; padding-top: 0%;">
+        <h2>Gallery</h2>
+        <br>
+        <div class="w3-half">
+          <img src="microCT.bmp"
+            style="width:90%; padding-bottom: 10%; display: block; margin-left: auto; margin-right: auto;"
+            onclick="onClick(this)" alt="Laser Sintered PA12 specimen cross-section captured using Micro-CT">
+          <img src="LS_PA2200_WFL_top_surface_front.png"
+            style="width:100%; padding-bottom: 10%; display: block; margin-left: auto; margin-right: auto;"
+            onclick="onClick(this)" alt="Laser Sintered PA12 top surface built conventionally (with finish layers)">
+          <img src="0msteel2.png"
+            style="width:90%; padding-bottom: 10%; display: block; margin-left: auto; margin-right: auto;"
+            onclick="onClick(this)" alt="Surace height map of a stainless steel pin before wear testing">
+        </div>
+
+        <div class="w3-half">
+          <img src="UMT.png"
+            style="width:90%; padding-bottom: 10%; display: block; margin-left: auto; margin-right: auto;"
+            onclick="onClick(this)" alt="Pin-on-disk, ball-on-flat wear testing using a Bruker UMT TriboLab">
+          <img src="LS_PA2200_NFL_top_surface_front.png"
+            style="width:100%; padding-bottom: 10%; display: block; margin-left: auto; margin-right: auto;"
+            onclick="onClick(this)" alt="Laser Sintered PA12 top surface built without finish layers">
+          <img src="100msteel2.png"
+            style="width:90%; padding-bottom: 10%; display: block; margin-left: auto; margin-right: auto;"
+            onclick="onClick(this)"
+            alt="Surace height map showing material transfer to a stainless steel pin after wear testing">
+        </div>
+      </div>
+
+      <!-- Research Images -->
+      <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
+          <img id="img01" class="w3-image" alt="img" src=".">
+          <p id="caption"></p>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="w3-container" id="publications" style="padding: 5%;">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Publications.</b></h1>
+        <hr style="width:50px;border:5px solid grey" class="w3-round">
+        <br>
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0142941821003937#!" target="_blank">2021:
+            &nbsp;&nbsp;&nbsp; A comprehensive characterisation of Laser Sintered Polyamide-12 surfaces</a></p>
+        <p class="w3-text-grey" style="margin-left: 5.5%;">Journal of polymer testing</p>
+        <br>
+        <p><a href="https://onlinelibrary.wiley.com/doi/10.1111/joa.13270" target="_blank">2020: &nbsp;&nbsp;&nbsp; The
+            Geometry of the roots of the Brachial Plexus</a></p>
+        <p class="w3-text-grey" style="margin-left: 5.5%;">Journal of anatomy</p>
+      </div>
+
+      <!-- Awards and grants -->
+      <div class="w3-container" id="awardsandgrants" style="padding: 5%;">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Awards and grants.</b></h1>
+        <hr style="width:50px;border:5px solid grey" class="w3-round">
+        <br>
+        <p>2022: &nbsp;&nbsp;&nbsp; Jost Foundation travel grant</p>
+        <p class="w3-text-grey" style="margin-left: 6.5%;">£1500 awarded</p>
+
+
+
+
+      </div>
+
+      <!-- Presentations -->
+      <div class="w3-container" id="presentations" style="padding: 5%;">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Presentations.</b></h1>
+        <hr style="width:50px;border:5px solid grey" class="w3-round">
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <br>
+            <h1 class="w3-xlarge w3-text-grey" style="text-align: center;"><b>Research poster</b></h1>
+            <a href="Poster_Presentation_KN.pdf" target="blank" download="Kieran_Nar_Poster_Presentation">
+              <img src="PosterPresentation.png" alt="PosterPresentation"
+                style="width:80%; display: block; margin-left: auto; margin-right: auto; padding-top: 1%; padding-bottom: 20%;">
+            </a>
+          </div>
+
+          <div class="w3-half">
+            <br>
+            <h1 class="w3-xlarge w3-text-grey" style="text-align: center;"><b>TriboUK presentation</b></h1>
+            <a href="TriboUK_Presentation_KN.pdf" target="blank" download="Kieran_Nar_TriboUK_Presentation">
+              <img src="tribouk.jpeg" alt="tribouk"
+                style="width:80%; display: block; margin-left: auto; margin-right: auto; padding-top: 1%;">
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:75px; padding: 0%;">
+          <h1 class="w3-xxxlarge w3-text-blue"><b>Contact.</b></h1>
+          <hr style="width:50px;border:5px solid grey" class="w3-round">
+          <h2>Get in touch!</h2>
+          <p class="w3-text-grey">Please do not hesitate to get in touch with any questions about current or furture
+            research projects.</p>
+          <div class="w3-row-padding w3-grayscale">
+            <a href="mailto:knar1@sheffield.ac.uk">
+              <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                  <img src="email.png" alt="email"
+                    style="width:25%; display: block; margin-left: auto; margin-right: auto; padding-top: 10%;">
+                  <div class="w3-container">
+                    <p style="text-align: center;" class="w3-opacity">Email</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/kieran-nar-421141115/" target="blank">
+              <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                  <img src="linkedin.png" alt="linkedin"
+                    style="width:25%; display: block; margin-left: auto; margin-right: auto; padding-top: 10%;">
+                  <div class="w3-container">
+                    <p style="text-align: center;" class="w3-opacity">LinkedIN</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="https://twitter.com/NarKieran" target="_blank">
+              <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                  <img src="twitter.png" alt="twitter"
+                    style="width:25%; display: block; margin-left: auto; margin-right: auto; padding-top: 10%;">
+                  <div class="w3-container">
+                    <p style="text-align: center;" class="w3-opacity">Twitter</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- End page content -->
+      </div>
+
+    </div>
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+
+  </body>
+
+</html>
